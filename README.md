@@ -2,7 +2,7 @@
 
 An n8n automation that reads incoming insurance claim emails, checks them against policy records, scores them for fraud-risk signals, and routes each claim to the right team, with no manual sorting.
 
-> Demo project built with mock data for a fictional insurer ("SmartInsure"). No real customer data is used.
+> Demo project built with mock data for a fictional insurance company. No real customer data is used.
 
 ![Workflow](workflow.png)
 
@@ -82,7 +82,7 @@ n8n · Claude (Anthropic) · Gmail · Google Sheets · Telegram · n8n Data Tabl
 1. Import `claims-intake-triage.json` in n8n via **Workflows → Import from file**.
 2. Reconnect credentials: Gmail, Google Sheets, Telegram and Anthropic.
 3. Create an n8n Data Table named `customers` with columns: `email`, `name`, `policy_number`, `policy_type`, `policy_start_date`, `coverage_limit`, `prior_claims`.
-4. Create a Google Sheet with tabs **Quick Approve**, **Needs Review**, **Red Flag** and **Manuel Check**, each with columns: `Name`, `email`, `Policy Number`, `Claim`, `AI Assesment`.
+4. Create a Google Sheet with tabs **Quick Approve**, **Needs Review**, **Red Flag** and **Manual Check**, each with columns: `Name`, `email`, `Policy Number`, `Claim`, `AI Assessment`.
 5. Replace the placeholders in the workflow: `YOUR_GOOGLE_SHEET_ID`, `YOUR_TELEGRAM_CHAT_ID`.
 6. Activate the workflow and send a test claim email.
 
